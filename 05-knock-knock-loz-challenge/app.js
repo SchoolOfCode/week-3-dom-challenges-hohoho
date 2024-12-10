@@ -14,30 +14,31 @@ Expected Outcomes:
 
 // Place your plan and solution below!
 
-// Make a random number 0 / 1 generating function.
+// Make a random number generating function that returns true/false.
 function isTrue() {
   const door = Math.floor(Math.random() * 2 + 1);
   return door === 1 ? true : false;
 }
 
+//Add timer to close doors/
 const doorReset = () => {
   for (let d of door) {
     d.src = "door-closed.png";
   }
 };
 
-// Store the pointer to the doors div in a variable.
+// Store the pointer to the doors div and imgs in variables.
+// Add event listeners.
+// When clicked generate true or false with isTrue().
+// if it gives false:
+//   First img src changes to open door and second img src becomes Loz.
+// else if it gets true:
+//    first imgs src changes to Loz and second's src becomes open door.
 const doorsDiv = document.querySelector("div");
 const door = document.querySelectorAll(".door");
-// add an event listener to it.
-// When clicked the first child should generate either 0 or one.
-// if it gets false:
-//     its src changes to open door and last child src is Loz.
-// else if it gets true:
-//    its src changes to Loz and last chils src is open door.
+
 doorsDiv.addEventListener("click", () => {
   const lozDoor = isTrue();
-  console.log(lozDoor);
   if (lozDoor) {
     door[0].src = "door-open-loz.png";
     door[1].src = "door-open-empty.png";
@@ -47,6 +48,3 @@ doorsDiv.addEventListener("click", () => {
   }
   setTimeout(doorReset, 3000);
 });
-
-//add timer to close doors/
-
