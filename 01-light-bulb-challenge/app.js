@@ -12,5 +12,27 @@ Expected Outcomes:
   2. When the "Turn Off" button is clicked, the lightbulb image should change to its 'off' state.
   3. The bulb's state should only change when the respective button is clicked.
 */
+const lightOnButton = document.getElementById("turnBulbOn");
+const lightBulbImg = document.getElementById("lightbulb");
+//create a function
+function turnOnLight(){
+  lightBulbImg.src = "light-bulb-on.png" 
+};
+
+//pass the name of the function to the event handler
+//think in physical terms
+
+lightOnButton.addEventListener('click', turnOnLight);
 
 // Place your plan and solution below!
+
+const lightOffButton = document.getElementById("turnBulbOff");
+//create a function
+function turnOffLight(){
+  lightBulbImg.src = "light-bulb-off.png" 
+};
+
+//pass the name of the function to the event handler
+//think in physical terms
+
+lightOffButton.addEventListener('click', turnOffLight);

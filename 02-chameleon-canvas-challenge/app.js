@@ -13,3 +13,24 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+//whats our problem: We want the color picker to cause the canvas to change color 
+//Grab color picker input
+const colorInput = document.getElementById("colorPicker");
+//Grab canvas
+const canvas = document.getElementById("canvas");
+//what needs to listen to what?
+//event listener: canvas to listen to the color picker
+//canvas should be listening every time
+//
+
+function test(){
+//console.log("hi");
+//get current color in value(in colorInput.value)
+//change canvas.style.background to colorInput.value
+canvas.style.background = colorInput.value;
+};
+
+//canvas 
+//canvas.addEventListener('mouse over', test) 
+colorInput.addEventListener('input', test);
