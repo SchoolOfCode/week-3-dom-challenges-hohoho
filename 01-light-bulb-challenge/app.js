@@ -14,3 +14,23 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+// Capture the turn on and turn off buttons in variables.
+const onBtn = document.getElementById("turnBulbOn");
+const offBtn = document.getElementById("turnBulbOff");
+
+// Capture the img tag in a variable.
+const image = document.querySelector("img");
+
+// Add "click" event listeners to the turn on and turn off buttons.
+onBtn.addEventListener("click", () => {
+  // When turn on btn is clicked, change the img src to lightbulbon png
+  image.src = "light-bulb-on.png";
+});
+
+offBtn.addEventListener("click", () => {
+  // When turn on btn is clicked, change the img src to lightbulbon png
+  image.src = "light-bulb-off.png";
+});
+
+// When turn off btn clicked, change src to lightBulbOff png/

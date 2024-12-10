@@ -13,3 +13,16 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+// When the input element gets input set the canvas' background colour to
+// the value attribute of input.
+
+// Store Canvas and input elements in variables.
+const canvas = document.querySelector('#canvas');
+const colourInput = document.querySelector('#colorPicker');
+// Add an eventListener to the input
+colourInput.addEventListener('input', (e) => {
+  canvas.setAttribute("style", `background: ${e.target.value}`)
+})
+// in the eventListener function set the canvas background to
+// input's value;

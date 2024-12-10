@@ -13,3 +13,14 @@ Expected Outcomes:
 */
 
 // Place your plan and solution below!
+
+// Store the slider and span in variables.
+const slider = document.querySelector("#starSlider");
+const span = document.querySelector(".star-icon");
+// Attach an eventListener to the slider.
+// When the slider receives an interaction fill the
+// textContent of the span with the appropriate number of    star icons.
+slider.addEventListener("input", () => {
+  let starCount = `★`.repeat(slider.value);
+  span.textContent = starCount;
+});

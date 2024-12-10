@@ -15,3 +15,17 @@ Hint: You can achieve this in multiple ways e.g. via the opacity or style proper
 */
 
 // Place your plan and solution below!
+
+// Store the image in a variable.
+const chris = document.getElementById("chrisImage");
+// Attach a mouseover eventListener and a mouseout    eventListener to the image.
+// Mouseover:
+// Trigger transition by changing opacity of image (to 0) via set attributes.
+chris.addEventListener("mouseover", () => {
+  chris.style.opacity = 0;
+});
+// Mouseout:
+// Set opacity to 1.
+chris.addEventListener("mouseout", () => {
+  chris.style.opacity = 1;
+});
